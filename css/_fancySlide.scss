@@ -11,14 +11,14 @@
 
   $contentLeft: 20%;
   $smallContentLeft: 5%;
-  $contentTop: 50%;
+  $contentTop: 36%;
   
   $headingPadding: 30px;
   $headingFontSize: 80px;
   $medHeadingFontSize: 50px;
 
   $smallHeadingFontSize: 40px;
-  $maskTop: 40%;
+  $maskTop: 25%;
   $maskRight: 100% - $contentLeft;
   $maskHeight: 67vh;
   $maskHeight: 45vh;
@@ -46,7 +46,7 @@
     overflow: hidden;
     box-sizing: border-box;
     position: relative;
-    height: 100vh;
+    height: 86vh;
 
     *, *:before, *:after {
       box-sizing: border-box;
@@ -439,7 +439,7 @@ body {
 .demo-cont {
   overflow: hidden;
   position: relative;
-  height: 100vh;
+  height: 86vh;
   perspective: 1500px;
   background: #000;
   
