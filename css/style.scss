@@ -17,7 +17,7 @@ $colorIndigo:#0161ab;
 $colorYellow:#aabd00;
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
   } 
 body{
     color:#444444;
@@ -136,6 +136,8 @@ a.btn{
 
 .navbar-brand{
     margin-right:0 !important;
+    max-width: 250px;
+    width: 100%;
 }
 .owl-nav{
     text-align: center;
@@ -185,13 +187,13 @@ a.btn{
 .sticky{
     position: sticky !important;
     top:0px;
-    background-color: rgba(255,255,255,.95) !important;
+    background-color: rgba(255,255,255,.85) !important;
     border-bottom: 1px solid #ebebeb;
     padding:0 !important;
-    transition: none !important;
+    //transition: none !important;
     .navbar{
         li.nav-item{
-            @media screen and (min-width:993    px) {
+            @media screen and (min-width:993px) {
                 a{
                     padding-top:12px !important;
                     color:#555 !important;
@@ -240,6 +242,7 @@ a.btn{
     background-color: rgba(255,255,255,.9);
     box-shadow: 0px 2px 4px rgba(180,180,180,.3);
     //background-color: #d6f6cbc4;
+    @include transition(all .35s ease-in-out);
     z-index: 100;
     position:relative;
     min-height: 10vh;
@@ -256,6 +259,10 @@ a.btn{
     }
     @media screen and(max-width:425px) {
         padding:0;
+        .row{
+            padding-top:.25rem;
+            padding-bottom:.25rem;
+        }
         
     }
     .container{
@@ -290,16 +297,19 @@ a.btn{
             }
         }
         li.nav-item{
+            
+            
             a{
                 font-size:1.1em;
                 color:#333;
                 font-weight: 600;
-                padding:20px 20px 0px 20px;
+                padding:10px 20px 0px 20px;
                 border: {
-                    style:solid;
-                    color:rgba(0, 0, 0, .05);
-                    width:0px;
+                    // style:solid;
+                    // color:rgba(0, 0, 0, .05);
+                    // width:0px;
                 }
+                border:none;
                 border-right-width:1px;
                 
             }
@@ -475,6 +485,7 @@ a.btn{
             padding-bottom:20px;
             margin-top:50px;
             padding:10px;
+            padding-bottom:25px;
         }
         .numering{
             background-color: $mainColor;
@@ -505,7 +516,7 @@ a.btn{
 
     
     .interpretCont{
-        padding:4rem 1.5rem;
+        padding:3rem 1.5rem;
         h2{
             font-size: 3rem;
             margin-bottom:1.5rem;
@@ -716,43 +727,52 @@ a.btn{
 }
 
 .industryCont{
-    padding:3rem 0;
+   
     h2{
         font-size: 3rem;
         margin-bottom:3rem;
     }
-    li{
-        margin-bottom:2rem;
-        text-align: center;
-        @media screen and (max-width:576px){
-            margin-bottom:3rem;
-        }
-        &:hover{
-         i{
-            color:$colorLime;
-            background-color: #fff;
-            box-shadow:0px 0px 2px 2px $colorIndigo;
-          }
-        }
-        i{
-            color:#fff;
-            background-color: $colorLime;
-            width:7rem;
-            height: 7rem;
-            line-height: 6.5rem;
-            border-radius: 50%;
-            font-size: 3rem;   
-            margin:auto 1rem;
-            border:1px solid transparent;  
-            text-align: center; 
-        }
-        h4{
-            color:$colorIndigo;
-            font-size:1.4rem;
-            font-weight: 600;
-            padding-top: .5rem;
+    ul{
+        margin-bottom:0;
+        li{
+            margin-bottom:2.5rem;
+            @media screen and (max-width:767px) {
+                &:last-child{
+                    margin-bottom:0;
+                }
+            }
+            text-align: center;
+            @media screen and (max-width:576px){
+                margin-bottom:3rem;
+            }
+            &:hover{
+             i{
+                color:$colorLime;
+                background-color: #fff;
+                box-shadow:0px 0px 2px 2px $colorIndigo;
+              }
+            }
+            i{
+                color:#fff;
+                background-color: $colorLime;
+                width:7rem;
+                height: 7rem;
+                line-height: 6.5rem;
+                border-radius: 50%;
+                font-size: 3rem;   
+                margin:auto 1rem;
+                border:1px solid transparent;  
+                text-align: center; 
+            }
+            h4{
+                color:$colorIndigo;
+                font-size:1.4rem;
+                font-weight: 600;
+                padding-top: 1rem;
+            }
         }
     }
+   
 }
 
 
@@ -779,11 +799,11 @@ a.btn{
     
     h2{
         font-size:3rem;
-        margin-bottom: 0rem;
+        margin-bottom: 1rem;
     }
     p{
         font-size:1.5rem;
-        margin-bottom:3rem;
+        margin-bottom:2rem;
     }
 
     form{
@@ -884,6 +904,7 @@ a.btn{
             line-height: 2.2rem;
             font-size:1.5rem;
             letter-spacing: .1rem;
+            
             &::first-letter{
                 color: #3daf47;
                 letter-spacing: .2rem;
@@ -1161,5 +1182,9 @@ body.offcanvas-active{
   .mobile-offcanvas.showCanvas{
     visibility: visible;
     transform: translateX(0);
+    nav-item{
+        animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+    }
   }
 }
