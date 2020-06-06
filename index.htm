@@ -21,14 +21,26 @@
  
     <div class="container-fluid top_nav pt-2 pb-3 pAbs">
         <div class="container px-5">
-            <nav class="navbar navbar-expand-lg navbar-light" >
-                <a class="navbar-brand" href="#"><img src="images/logo.png"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <b class="screen-overlay"></b>
+     <div class="row mx-0">
+      <a class="navbar-brand  d-block d-xl-none d-lg-none col-md-5 col-6" href="#"><img src="images/logo.png" class="img-fluid"></a>
+
+      <button data-trigger="#navbar_main" class="d-lg-none pull-right col-md-2 offset-md-5 col-2 offset-4" type="button"> 
+        <i class="fa fa-bars fa-2x"></i> </button>
+     </div>
+            <nav class="navbar navbar-expand-lg navbar-light mobile-offcanvas" id='navbar_main'>
+               
+                <a class="navbar-brand d-none d-lg-block" href="#"><img src="images/logo.png"></a>
+                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> -->
               
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class=" navbar-collapse" id="navbarSupportedContent">
+                  
                   <ul class="navbar-nav  ml-auto">
+                    <div class="offcanvas-header"> 
+                      <button class="btn-close float-right fa fa-2x m-2"> &times</button>
+                    </div>
                     <li class="nav-item">
                       <a class="nav-link active" href="#whyUs">Why Us <span class="sr-only">(current)</span></a>
                     </li>
@@ -154,8 +166,8 @@
   <!-----Why us banner---->
   
 <section class="whyUsCont container-fluid">
-  <span id='whyUs'></span>
    <div class="whybg py-5">
+    <span id='whyUs'></span>
     <div class="container">
       <div class="row d-flex align-items-center">
           <div class="col-md-6 col-12 wow fadeInUp" data-wow-duration="2s">
@@ -172,15 +184,15 @@
           <div class=" d-flex align-items-center">
           <div class="col-lg-6 col-12 wow fadeInUp" data-wow-duration="2s">
                   <ul>
-                      <li><span class="numering">1</span>  are selected upon a careful screening process then tested for skills and knowledge
+                      <li><span class="numering">1</span> Are selected upon a careful screening process then tested for skills and knowledge
                       </li>
                       <li><span class="numering">2</span> Receive continuous trainings and professional programs obligated by our training department
                       </li>
                       <li>
-                          <span class="numering">3</span> are well trained to handle the call efficiently in highly sensitive and stressful situations
+                          <span class="numering">3</span> Are well trained to handle the call efficiently in highly sensitive and stressful situations
                       </li>
                       <li>
-                          <span class="numering">4</span> are compliant to HIPAA, NCIHC National Code of Ethics and Standards of Practice
+                          <span class="numering">4</span> Are compliant to HIPAA, NCIHC National Code of Ethics and Standards of Practice
                       </li>
                   </ul>
              
@@ -266,8 +278,8 @@
                 <div class="col-md-9">
                     <h2>Quality Policy</h2>
                   <ul>
-                    <li><i class="fa fa-check-double"></i> Highly qualified interpreters well trained to deal with sensitive and stressful encounters professionally.</li>
-                    <li><i class="fa fa-check-double"></i> All of our training programs are comprehensive and meet NCIHC, IMIA, CCHI standards.</li>
+                    <li> <i class="fa fa-check-double"></i> Highly qualified interpreters well trained to deal with sensitive and stressful encounters professionally.</li>
+                    <li> <i class="fa fa-check-double"></i> All of our training programs are comprehensive and meet NCIHC, IMIA, CCHI standards.</li>
                     <li> <i class="fa fa-check-double"></i> Thorough training on medical terminology by subject matter experts.</li>
                     <li> <i class="fa fa-check-double"></i> Continuous professional development to insure quality.</li>
                   </ul>
@@ -310,9 +322,10 @@
       <div class="container">
         <div class="text-center">
           <h2>Careers</h2>
-        <p class="col-sm-8 offset-sm-2 col-12 px-0">Because we believe in our core values, we continue to identify talented people who share these principles.
-          
-          We need proficient people to work with us. Everything we do, every day, helps to make a unique contribution to our clients` success story.
+        <p class="col-sm-8 offset-sm-2 col-12 px-0">Because we believe in our core values, 
+          we continue to identify talented people who share these principles.
+          We need proficient people to work with us. Everything we do, 
+          every day, helps to make a unique contribution to our clients` success story.
         </p>
         <a class="btn btn-primary px-5 font-weight-bold" href="careers.htm">Join now</a>
         </div>
