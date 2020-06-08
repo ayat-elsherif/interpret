@@ -38,6 +38,15 @@ $(function(){
       $(".mobile-offcanvas").removeClass("showCanvas");
       $("body").removeClass("offcanvas-active");
   }); 
+  $(window).resize(function(){
+      if( $(".screen-overlay").hasClass("showCanvas")){ 
+          if($(window).width() > 992){
+            $(".mobile-offcanvas").removeClass("showCanvas");
+            $("body").removeClass("offcanvas-active");
+            $(".screen-overlay").removeClass("showCanvas");
+        }
+    }
+  });
 /**************offcanvas *************/
 
 

@@ -304,10 +304,8 @@ a.btn{
                 color:#333;
                 font-weight: 600;
                 padding:10px 20px 0px 20px;
-                border: {
-                    // style:solid;
-                    // color:rgba(0, 0, 0, .05);
-                    // width:0px;
+                @media screen and(max-width:992px) {
+                    padding-top:20px;
                 }
                 border:none;
                 border-right-width:1px;
@@ -1159,13 +1157,11 @@ body.offcanvas-active{
   width:100%;
   visibility:visible;
 }
-	
-@media all and (max-width:992px) { 
 
- .offcanvas-header{ display:block; }
- 
- .mobile-offcanvas{
-    visibility: hidden;
+
+.mobile-offcanvas{
+    @media screen and (max-width:992px) {
+        visibility: hidden;
     transform:translateX(-100%);
     border-radius:0; 
     display:block;
@@ -1173,12 +1169,21 @@ body.offcanvas-active{
     top: 0; left:0;
     height: 100%;
     z-index: 1200;
-    width:80%;
+    width:40%;
     overflow-y: scroll;
     overflow-x: hidden;
     transition: visibility .2s ease-in-out, transform .2s ease-in-out;
+    }
+    @media screen and (max-width:576px) {
+        width:80%;
+    }
   }
 
+	
+@media all and (max-width:992px) { 
+
+ .offcanvas-header{ display:block; }
+ 
   .mobile-offcanvas.showCanvas{
     visibility: visible;
     transform: translateX(0);
